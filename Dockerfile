@@ -14,8 +14,8 @@ COPY --chown=node:node . .
 
 EXPOSE 80
 
-RUN apt update
+RUN sudo apt update
 
-RUN apt install -y nginx
+RUN sudo apt install -y nginx
 
 CMD [ "npm", "run", "start;"]
