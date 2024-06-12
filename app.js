@@ -9,6 +9,10 @@ router.get('/hello', function(req,res){
     res.sendFile(path + 'hello.html');
 });
 
+router.get('/', function(req,res){
+  res.sendFile(path + 'index.html');
+});
+
 app.use(express.static(path));
 app.use('/', router);
 
