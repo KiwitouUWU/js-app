@@ -10,9 +10,9 @@ RUN apt-get -y update && apt-get -y install nginx && apt-get -y install nodejs &
 
 RUN rm -f /etc/nginx/conf.d/default.conf
 
-COPY default.conf /etc/nginx/conf.d
+COPY default.conf /etc/nginx/conf.d/
 
-COPY run-docker.sh /home
+COPY run-docker.sh /home/
 
 RUN npm install
 
