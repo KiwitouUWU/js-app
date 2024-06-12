@@ -6,7 +6,7 @@
     "license": "MIT",
     "main": "app.js",
     "scripts": {
-      "start": "/etc/init.d/nginx start && node app.js"
+      "start": "node app.js"
     },
     "keywords": [
       "nodejs",
