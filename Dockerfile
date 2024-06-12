@@ -12,8 +12,10 @@ RUN rm -f /etc/nginx/conf.d/default.conf
 
 COPY default.conf /etc/nginx/conf.d
 
+COPY run-docker.sh /home
+
 RUN npm install
 
 EXPOSE 80
 
-CMD [ "npm", "run", "start;"]
+CMD [ "bash", "/home/run-docker.sh;"]
