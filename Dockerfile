@@ -12,6 +12,10 @@ RUN npm install
 
 COPY --chown=node:node . .
 
-EXPOSE 3000
+EXPOSE 80
 
-CMD [ "node", "app.js" ]
+RUN apt update
+
+RUN apt install -y nginx
+
+CMD [ "npm", "run", "start;"]
