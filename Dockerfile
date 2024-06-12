@@ -1,4 +1,6 @@
-FROM node:10-alpine
+FROM ubuntu
+
+RUN apt-get -y update && apt-get -y install nginx && apt-get -y install nodejs
 
 RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
 
@@ -13,9 +15,5 @@ RUN npm install
 COPY --chown=node:node . .
 
 EXPOSE 80
-
-RUN sudo apt update
-
-RUN sudo apt install -y nginx
 
 CMD [ "npm", "run", "start;"]
